@@ -863,6 +863,135 @@ div {
   margin-bottom: 8px;
 }
 
+/* ---------- WRITING ---------- */
+
+.writing-section {
+  margin-top: 0;
+  padding-inline: 0;
+  background: #ffffff;
+}
+
+.writing-shell {
+  background: #ffffff;
+  border: 1px solid rgba(7, 26, 47, 0.08);
+  border-radius: var(--radius);
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.writing-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  padding-inline: clamp(4px, 1vw, 8px);
+  margin-bottom: 28px;
+}
+
+.writing-header h2 {
+  color: var(--text);
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.02;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  max-width: 760px;
+}
+
+.writing-header p {
+  color: var(--text-soft);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 620px;
+}
+
+.writing-tag {
+  color: var(--text);
+  border-color: rgba(241, 90, 36, 0.5);
+  background: rgba(241, 90, 36, 0.04);
+}
+
+.writing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+.writing-card {
+  background: #ffffff;
+  border-color: rgba(7, 26, 47, 0.08);
+  transition:
+    box-shadow 0.28s ease,
+    border-color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.writing-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--line-strong);
+}
+
+.writing-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px 24px 24px;
+}
+
+.writing-kicker {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  width: fit-content;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(7, 26, 47, 0.58);
+  background: rgba(7, 26, 47, 0.03);
+}
+
+.writing-card h3 {
+  font-size: clamp(22px, 2.4vw, 32px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  margin: 16px 0 14px;
+  width: 100%;
+  max-width: none;
+}
+
+.writing-description {
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--text-soft);
+  max-width: 460px;
+}
+
+.writing-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 18px;
+  margin-bottom: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.writing-meta span,
+.writing-meta strong {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.writing-meta strong {
+  color: rgba(7, 26, 47, 0.72);
+  text-align: right;
+}
+
 /* ---------- CONTACT ---------- */
 
 .contact-section {
@@ -1165,6 +1294,14 @@ div {
     min-height: 320px;
   }
 
+  .writing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .writing-card h3 {
+    max-width: 100%;
+  }
+
   .experience-item summary {
     flex-direction: column;
     align-items: flex-start;
@@ -1254,6 +1391,31 @@ div {
 
   .projects-grid {
     padding-inline: 0;
+  }
+
+  .writing-shell {
+    padding: 24px 18px 22px;
+  }
+
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-header h2 {
+    font-size: clamp(30px, 9vw, 44px);
+  }
+
+  .writing-card-body {
+    padding: 22px 18px 20px;
+  }
+
+  .writing-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .writing-meta strong {
+    text-align: left;
   }
 
   .contact-card {
